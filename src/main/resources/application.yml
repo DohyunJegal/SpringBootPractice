@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8
+    username: user
+    password: user1234
+    sql-script-encoding: UTF-8
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update # create DDL(create, drop, alter, ...) when project runs, create & update
+      use-new-id-generate-mappings: false # use basic JPA numbering
+    show-sql: true # show sql log when project runs
+    properties:
+      hibernate.format_sql: true # sql formatting
+
+  thymeleaf:
+    cache: false
+
+  devtools:
+    livereload:
+      enabled: true
